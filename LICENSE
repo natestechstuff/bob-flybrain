@@ -1,0 +1,39 @@
+Bob FlyBrain License
+
+Copyright (c) 2026 Nate's Tech Stuff. All rights not granted below are reserved.
+
+This license covers Bob FlyBrain: the source code in this repository and the
+trained files published with it (together, "Bob FlyBrain").
+
+1. What you CAN do
+   - Download and run Bob FlyBrain, for free, for your own personal use.
+   - Read the source code for reference and learning.
+   - Train and run your own copy of Bob from this source for your own
+     personal use on your own devices.
+
+2. What you CAN'T do (without written permission)
+   - Copy or reproduce Bob FlyBrain or any part of it, except as allowed above.
+   - Modify it, or make and share your own versions based on it.
+   - Redistribute, publish, re-upload or share copies of it, whether free or
+     paid. Link to this repository instead.
+   - Sublicense, sell, resell or rent it, or include it in another product
+     or service.
+
+3. No warranty
+   Bob FlyBrain is provided "as is", without warranty of any kind, express or
+   implied. Use it at your own risk. Nate's Tech Stuff is not liable for any
+   claim, damage or loss of any kind arising from Bob FlyBrain or its use, to
+   the fullest extent the law allows.
+
+4. Third-party parts
+   Bob FlyBrain builds on third-party work (the Drosophila brain model by
+   Shiu et al., the FlyWire connectome and its annotations). Each stays under
+   its own license, listed in THIRD_PARTY_NOTICES.md. Nothing in this license
+   limits any right those licenses give you for those parts. The FlyWire data
+   is not included in this repository; get_data.sh downloads it from its
+   original source under its own terms.
+
+5. Permission
+   For any use not allowed above, ask: info@natestechstuff.com
+
+If you break these terms, your permission to use Bob FlyBrain ends.
