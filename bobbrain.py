@@ -94,7 +94,7 @@ def make_groups(n_mbon, N, kcin, mode='groups', code_size=8, seed=0):
 def make_plus(ip, ix, dd, n, kc, pns, factor, seed, kc_w_scale=True):
     """Bob+: add (factor-1)*len(kc) SYNTHETIC Kenyon cells to a (sub) circuit given as CSR.
     Each synthetic KC copies a random real KC ('template'): it gets the template's number and strengths of
-    PN inputs but from RANDOMLY chosen projection neurons (fly-like random PN->KC sampling, ~6-7 PNs per KC),
+    PN inputs but from RANDOMLY chosen projection neurons (fly-like random PN->KC sampling),
     the template's other inputs (APL, DPM, DANs, other KCs) and the template's outputs. All KC outputs are
     scaled by 1/factor so total KC drive onto APL/MBONs stays at the real brain's level.
     Returns new CSR, new n, synthetic indices, template index per synthetic KC."""

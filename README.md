@@ -76,23 +76,23 @@ telling "A" from "A+B" apart.
 
 The real fly has about 5,200 Kenyon cells. **Bob+** adds made-up (synthetic) Kenyon cells: 2x, 5x and 10x as many.
 Each synthetic cell copies a random real Kenyon cell's outputs and other inputs, but gets its smell inputs from
-randomly chosen projection neurons (fly-like random wiring, ~6-7 inputs each). All Kenyon-cell outputs are scaled
+randomly chosen projection neurons, as many as the real cell it copies (fly-like random wiring). All Kenyon-cell outputs are scaled
 down by the same factor so the total drive onto the output neurons stays the same. **Bob+ is partly synthetic, not
 a real fly.**
 
-Measured on Kaggle CPU with the earlier 16-round training (no mixture gain control), smells added singles first,
-then pairs, one random seed:
+Final recipe, Kaggle CPU, one random seed (seed 0), smells added singles first then pairs (then triples at 48):
 
-| brain | Kenyon cells | neurons | 16 mappings | 24 | 32 | holds (≥85%) | time per smell, laptop | peak RAM, laptop |
-|---|---|---|---|---|---|---|---|---|
-| real (small circuit) | 5,177 | 6,293 | 73% | | | 8 | 0.43 s | 504 MB |
-| Bob+ 2x | 10,354 | 11,470 | 83% | | | 8* | 0.62 s | 504 MB |
-| Bob+ 5x | 25,885 | 27,001 | 96% | 90% | 74% | 24 | 1.1 s | 551 MB |
-| Bob+ 10x | 51,770 | 52,886 | 88% | 85% (84.7) | | 16 | 1.9 s | 819 MB |
+| brain | Kenyon cells | neurons | 16 | 24 | 32 | 48 | holds (≥85%) | crosses 85% | time per smell, laptop | peak RAM, laptop |
+|---|---|---|---|---|---|---|---|---|---|---|
+| real (small circuit) | 5,177 | 6,293 | 92% | 90% | 77% | | 24 | between 24 and 32 | 0.43 s | 504 MB |
+| Bob+ 2x | 10,354 | 11,470 | 90% | 88% | 79% | | 24 | between 24 and 32 | 0.62 s | 504 MB |
+| Bob+ 5x | 25,885 | 27,001 | 98% | 93% | 87% | 71% | 32 | between 32 and 48 | 1.1 s | 551 MB |
+| Bob+ 10x | 51,770 | 52,886 | 96% | 94% | 90% | 81% | 32 | between 32 and 48 | 1.9 s | 819 MB |
 
-\* not run at 8; 8 single smells were 100% on the real brain. More Kenyon cells help a little (5x did best), but
-10x the cells does not mean 10x the memories: the 96 output neurons and the "A is inside A+B" overlap stay the
-limits. A re-run of Bob+ with the final recipe was still running when this was written.
+More Kenyon cells make Bob more accurate at every size and push the break point from about 24 to about 32-48
+mappings, but 10x the cells is nowhere near 10x the memories. The 96 output neurons and the "A is inside A+B"
+overlap stay the limits; at 32 mappings even Bob+ 10x gets only 67% of the single smells right. (Peak RAM is mostly
+loading the connectome file; Kaggle RAM per run: 487 / 534 / 802 MB for 2x / 5x / 10x.)
 
 ## Run it
 
