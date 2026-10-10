@@ -1,0 +1,41 @@
+[
+ {
+  "name": "real_s0",
+  "args": "--brain sub --seed 0 --mix_norm 0.5 --blocks 40 --reps 2 --test_reps 3 --anneal 0.8",
+  "Ns": [
+   8,
+   16,
+   24,
+   32,
+   48,
+   64,
+   92
+  ]
+ },
+ {
+  "name": "real_s1",
+  "args": "--brain sub --seed 1 --mix_norm 0.5 --blocks 40 --reps 2 --test_reps 3 --anneal 0.8",
+  "Ns": [
+   8,
+   16,
+   24,
+   32,
+   48,
+   64,
+   92
+  ]
+ },
+ {
+  "name": "real_s2",
+  "args": "--brain sub --seed 2 --mix_norm 0.5 --blocks 40 --reps 2 --test_reps 3 --anneal 0.8",
+  "Ns": [
+   8,
+   16,
+   24,
+   32,
+   48,
+   64,
+   92
+  ]
+ }
+]

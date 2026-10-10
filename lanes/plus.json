@@ -1,0 +1,35 @@
+[
+ {
+  "name": "plus2x",
+  "args": "--brain plus --factor 2 --seed 0 --mix_norm 0.5 --blocks 40 --reps 2 --test_reps 3 --anneal 0.8",
+  "Ns": [
+   16,
+   24,
+   32,
+   48,
+   64
+  ]
+ },
+ {
+  "name": "plus5x",
+  "args": "--brain plus --factor 5 --seed 0 --mix_norm 0.5 --blocks 40 --reps 2 --test_reps 3 --anneal 0.8",
+  "Ns": [
+   16,
+   24,
+   32,
+   48,
+   64
+  ]
+ },
+ {
+  "name": "plus10x",
+  "args": "--brain plus --factor 10 --seed 0 --mix_norm 0.5 --blocks 40 --reps 2 --test_reps 3 --anneal 0.8",
+  "Ns": [
+   16,
+   24,
+   32,
+   48,
+   64
+  ]
+ }
+]
